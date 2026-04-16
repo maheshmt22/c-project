@@ -1,24 +1,23 @@
-// C program to find the largest number among three number
-// using nested if-else
 #include <stdio.h>
 
-int main()
-{
-    int c = 10, b = 22, a = 9;
+void biggest() {
 
-    // Finding largest by comparing using relational operators
-    if (a >= b) {
-        if (a >= c)
-            printf("%d is the largest number.", a);
-        else
-            printf("%d is the largest number.", c);
-    }
-    else {
-        if (b >= c)
-            printf("%d is the largest number.", b);
-        else
-            printf("%d is the largest number.", c);
-    }
+  double n1, n2, n3;
 
-    return 0;
+  printf("Enter three different numbers: ");
+  scanf("%lf %lf %lf", &n1, &n2, &n3);
+
+  // if n1 is greater than both n2 and n3, n1 is the largest
+  if (n1 >= n2 && n1 >= n3)
+    printf("%.2f is the largest number.", n1);
+
+  // if n2 is greater than both n1 and n3, n2 is the largest
+  if (n2 >= n1 && n2 >= n3)
+    printf("%.2f is the largest number.", n2);
+
+  // if n3 is greater than both n1 and n2, n3 is the largest
+  if (n3 >= n1 && n3 >= n2)
+    printf("%.2f is the largest number.", n3);
+
+ //return 0;
 }
